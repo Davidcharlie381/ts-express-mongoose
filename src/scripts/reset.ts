@@ -1,7 +1,7 @@
 import fs from "fs";
 
 console.log("Started... \nRenaming...")
-fs.cp(".env", ".env.example", (error) => {
+fs.rename(".env", ".env.example", (error) => {
   if (error) {
     return console.log("Failed to copy:", error);
   }
